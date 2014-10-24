@@ -20,31 +20,25 @@ a:hover, a:active {
     color: #444;
 }
 
-.clearfix::after, .colgroup::after, .colgroup::before, .clearfix::before {
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+input, textarea {
+    border: 1px solid #e9e9e9;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+.clearfix::after, .clearfix::before {
     content: " ";
     display: block;
 }
 
-.clearfix::after, .colgroup::after {
+.clearfix::after {
     clear: both;
-}
-
-.colgroup [class*="col-"] {
-    box-sizing: border-box;
-    float: left;
-    min-height: 1px;
-}
-
-.col-0{
-    width: 100%;
-}
-
-.col-1 {
-    width: 25%;
-}
-
-.col-3 {
-    width: 75%;
 }
 
 .container {
@@ -64,12 +58,6 @@ a:hover, a:active {
     margin: 0;
 }
 
-input, textarea {
-    border: 1px solid #e9e9e9;
-    border-radius: 2px;
-    padding: 5px;
-}
-
 #menu-nav {
     margin-top: 30px;
 }
@@ -79,16 +67,25 @@ input, textarea {
     border-color: #eee;
     border-width: 1px;
     border-style: solid solid none;
-    display: block;
-    float: left;
+    display: inline-block;
     line-height: 32px;
-    margin-right: -1px;
+    margin-right: -5px;
     padding: 0 20px;
 }
 
-.articles {
-    list-style: none;
-    margin-left: -40px;
+#primary {
+    float: left;
+    width: 71%;
+}
+
+#side {
+    float: right;
+    width: 25%;
+    padding-left: 30px;
+}
+
+.rencent-title {
+    margin-bottom: 5px;
 }
 
 .articles li {

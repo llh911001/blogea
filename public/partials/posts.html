@@ -1,4 +1,4 @@
-<section>
+<section id="primary">
     <ul class="articles">
         <li ng-repeat="post in posts">
             <h4><a href="#/post/{{ post.id }}">{{ post.title }}</a></h4>
@@ -6,3 +6,5 @@
         </li>
     </ul>
 </section>
+
+<section id="side" ng-include="'partials/side.html'"></section>

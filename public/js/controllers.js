@@ -10,6 +10,16 @@ blogeaControllers.controller('AboutCtrl', ['$scope', '$http',
     }
 ]);
 
+blogeaControllers.controller('SearchCtrl', ['$scope',
+    function($scope) {
+        $scope.doSearch = function($event) {
+            if($event.keyCode === 13){
+                alert($scope.searchValue);
+            }
+        };
+    }
+]);
+
 blogeaControllers.controller('PostsListCtrl', ['$scope', '$http',
     function($scope, $http) {
         $http.get('api/posts').success(function(data) {

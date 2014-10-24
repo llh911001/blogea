@@ -2,7 +2,7 @@
 <html lang="en" ng-app="blogea">
     <head>
         <meta charset="UTF-8">
-        <title>Simple blog powered by Express and AngularJS</title>
+        <title>{{ title }}</title>
         <!-- >
         <base href="/">
         <--!>
@@ -21,24 +21,17 @@
     <div id="body">
         <header id="header">
             <div class="container">
-                <div class="colgroup">
-                    <div class="title col-3">
-                        <p id="logo">Hello World</p>
-                    </div>
-                    <div id="search" class="search col-1">
-                        <input type="text" name="search" placeholder="Search" />
-                    </div>
-                    <nav id="menu-nav" class="col-0">
-                        <a href="#/">Home</a>
-                        <a href="#/about">About</a>
-                    </nav>
+                <div class="title">
+                    <p id="logo">{{ logo }}</p>
                 </div>
+                <nav id="menu-nav" class="nav">
+                    <a href="#/">Home</a>
+                    <a href="#/about">About</a>
+                </nav>
             </div>
         </header>
 
-        <section class="container">
-            <section class="colgroup" ng-view></section>
-        </section>
+        <section class="container" ng-view></section>
     </div>
 
     </body>
