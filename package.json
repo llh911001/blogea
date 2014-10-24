@@ -1,0 +1,37 @@
+{
+  "name": "blogea",
+  "version": "0.0.1",
+  "description": "A Blog Powered by Express and AngularJs",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "bower": "^1.3.12",
+    "express": "^4.9.8",
+    "errorhandler": "^1.2.2",
+    "swig": "^1.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "bower install",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/llh911991/blogea"
+  },
+  "keywords": [
+    "blog",
+    "express.js",
+    "angular.js",
+    "mongodb"
+  ],
+  "author": "llh911001 <llh911001@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/llh911991/blogea/issues"
+  },
+  "homepage": "https://github.com/llh911991/blogea"
+}
