@@ -73,9 +73,14 @@ input, textarea {
     padding: 0 20px;
 }
 
-#primary {
+#about {
     float: left;
-    width: 71%;
+    width: 75%;
+}
+
+.main {
+    float: left;
+    width: 75%;
 }
 
 #side {

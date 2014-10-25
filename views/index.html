@@ -3,9 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>{{ title }}</title>
-        <!-- >
         <base href="/">
-        <--!>
         <link rel="stylesheet" href="css/style.css">
         <script type="text/javascript" src="bower_components/angular/angular.js"></script>
         <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
@@ -25,13 +23,30 @@
                     <p id="logo">{{ logo }}</p>
                 </div>
                 <nav id="menu-nav" class="nav">
-                    <a href="#/">Home</a>
-                    <a href="#/about">About</a>
+                    <a href="/">Home</a>
+                    <a href="/about">About</a>
                 </nav>
             </div>
         </header>
 
         <section class="container" ng-view></section>
+
+        <section id="side">
+            <div id="search" class="search" ng-cloak ng-controller="SearchCtrl">
+                <input type="text" name="search" placeholder="Search" ng-model="searchValue" ng-keyup="doSearch($event)" />
+            </div>
+            <div id="rencent">
+                <h3>Recent Posts</h3>
+                <ul>
+                    {% for post in recent %}
+                        <li class="recent-title">
+                            <a href="/post/{{ post.id }}">{{ post.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+
     </div>
 
     </body>

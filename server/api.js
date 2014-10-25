@@ -16,10 +16,15 @@ var data = [{
 
 
 exports.postList = function(req, res){
-    res.json(data);
+    res.json({posts: data});
 };
 
 exports.post = function(req, res){
     var id = req.params.postId;
     res.json(data[id] || false);
+};
+
+exports.recentPosts = function(){
+    var recent = data.slice(0, 10);
+    return recent;
 };

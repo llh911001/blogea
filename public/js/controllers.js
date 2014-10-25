@@ -23,7 +23,7 @@ blogeaControllers.controller('SearchCtrl', ['$scope',
 blogeaControllers.controller('PostsListCtrl', ['$scope', '$http',
     function($scope, $http) {
         $http.get('api/posts').success(function(data) {
-            $scope.posts = data;
+            $scope.posts = data.posts;
         });
     }
 ]);
