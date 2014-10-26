@@ -1,0 +1,16 @@
+
+<section class="main">
+    <p>Create new post</p>
+    <form id="edit-form" class="b-form" action="/api/create">
+        <ul>
+            <li>
+                <label>Title</label>
+                <input type="text" name="title" ng-model="form.title" required>
+            </li>
+            <li>
+                <label>Content</label>
+                <textarea class="b-text" name="content" ng-model="form.content" required></textarea>
+            </li>
+        </ul>
+    </form>
+</section>

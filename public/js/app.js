@@ -25,6 +25,10 @@ blogea.config(['$routeProvider', '$locationProvider', function($routeProvider, $
         templateUrl: 'partials/post.html',
         controller: 'PostCtrl'
     }).
+    when('/create', {
+        templateUrl: 'partials/create.html',
+        controller: 'CreateCtrl'
+    }).
     otherwise({
         redirectTo: '/'
     });

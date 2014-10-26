@@ -32,9 +32,10 @@ input, textarea {
     padding: 5px;
 }
 
+
 .clearfix::after, .clearfix::before {
     content: " ";
-    display: block;
+    display: table;
 }
 
 .clearfix::after {
@@ -87,6 +88,24 @@ input, textarea {
     float: right;
     width: 25%;
     padding-left: 30px;
+}
+
+.b-form li {
+    margin-bottom: 10px;
+}
+
+.b-form label {
+    display: inline-block;
+    width: 100px;
+}
+
+.b-form input, .b-form textarea {
+    width: 50%;
+    vertical-align: middle;
+}
+
+.b-form .b-text {
+    resize: none;
 }
 
 .rencent-title {
