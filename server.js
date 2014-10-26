@@ -57,8 +57,7 @@ server.get('/api/posts', api.postList);
 server.get('/api/post/:postId', api.post);
 
 // redirect all others to the index (HTML5 history)
-//server.get('*', routes.index);
-
+server.get('*', routes.index);
 
 /**
  * Start Server
