@@ -40,7 +40,7 @@ blogeaControllers.controller('CreateCtrl', ['$scope', '$http', '$location',
     function($scope, $http, $location) {
         $scope.form = {};
         $scope.createPost = function(){
-            $http.post('/api/post', $scope.form).success(function(data){
+            $http.post('/api/create', $scope.form).success(function(data){
                 $location.path('/');
             });
         };

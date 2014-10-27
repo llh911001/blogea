@@ -55,6 +55,7 @@ server.get('/', routes.index);
 // JSON API
 server.get('/api/posts', api.postList);
 server.get('/api/post/:postId', api.post);
+server.get('/api/create', api.create);
 
 // redirect all others to the index (HTML5 history)
 server.get('*', routes.index);

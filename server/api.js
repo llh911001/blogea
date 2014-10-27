@@ -24,6 +24,11 @@ exports.post = function(req, res){
     res.json(data[id] || false);
 };
 
+exports.create = function(req, res){
+    data.push(req.body);
+    res.json(req.body);
+}
+
 exports.recentPosts = function(){
     var recent = data.slice(0, 10);
     return recent;
