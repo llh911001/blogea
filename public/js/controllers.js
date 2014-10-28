@@ -20,18 +20,18 @@ blogeaControllers.controller('SearchCtrl', ['$scope',
     }
 ]);
 
-blogeaControllers.controller('PostsListCtrl', ['$scope', '$http',
+blogeaControllers.controller('ArticleListCtrl', ['$scope', '$http',
     function($scope, $http) {
-        $http.get('api/posts').success(function(data) {
-            $scope.posts = data.posts;
+        $http.get('api/articles').success(function(data) {
+            $scope.articles = data.articles;
         });
     }
 ]);
 
-blogeaControllers.controller('PostCtrl', ['$scope', '$routeParams', '$http',
+blogeaControllers.controller('ArticleCtrl', ['$scope', '$routeParams', '$http',
     function($scope, $routeParams, $http) {
-        $http.get('api/post/' + $routeParams.postId).success(function(data) {
-            $scope.post = data;
+        $http.get('api/article/' + $routeParams.articleId).success(function(data) {
+            $scope.article = data;
         });
     }
 ]);
@@ -39,8 +39,8 @@ blogeaControllers.controller('PostCtrl', ['$scope', '$routeParams', '$http',
 blogeaControllers.controller('CreateCtrl', ['$scope', '$http', '$location',
     function($scope, $http, $location) {
         $scope.form = {};
-        $scope.createPost = function(){
-            $http.post('/api/create', $scope.form).success(function(data){
+        $scope.submitCreateForm = function(event){
+            $http.post('/api/article', $scope.form).success(function(data){
                 $location.path('/');
             });
         };

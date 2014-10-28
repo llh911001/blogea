@@ -1,0 +1,9 @@
+<section class="main" id="primary">
+    <ul class="articles">
+        <li ng-repeat="article in articles">
+            <h4><a href="/article/{{ article.id }}">{{ article.title }}</a></h4>
+            <div>{{ article.content }}</div>
+        </li>
+    </ul>
+</section>
+

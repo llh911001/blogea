@@ -4,7 +4,7 @@
  */
 
 var express        = require('express'),
-    //bodyParser     = require('body-parser'),
+    bodyParser     = require('body-parser'),
     //methodOverride = require('method-override'),
     errorHandler   = require('errorhandler'),
     swig           = require('swig'),
@@ -28,7 +28,8 @@ server.set('views', __dirname + '/views');
 server.set('view engine', 'html');
 server.engine('html', require('swig').renderFile);
 //server.use(morgan('dev'));
-//server.use(bodyParser());
+server.use(bodyParser.urlencoded({extended: true}));
+server.use(bodyParser.json());
 //server.use(methodOverride());
 server.use(express.static(__dirname + '/public'));
 
@@ -53,9 +54,9 @@ if (env === 'production') {
 server.get('/', routes.index);
 
 // JSON API
-server.get('/api/posts', api.postList);
-server.get('/api/post/:postId', api.post);
-server.get('/api/create', api.create);
+server.get('/api/articles', api.articleList);
+server.get('/api/article/:articleId', api.article);
+server.post('/api/article', api.createArticle);
 
 // redirect all others to the index (HTML5 history)
 server.get('*', routes.index);

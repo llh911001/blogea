@@ -10,20 +10,20 @@ var blogea = angular.module('blogea', [
 blogea.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.
     when('/', {
-        templateUrl: 'partials/posts.html',
-        controller: 'PostsListCtrl'
+        templateUrl: 'partials/articles.html',
+        controller: 'ArticleListCtrl'
     }).
     when('/about', {
         templateUrl: 'partials/about.html',
         controller: 'AboutCtrl'
     }).
-    when('/posts', {
-        templateUrl: 'partials/posts.html',
-        controller: 'PostsListCtrl'
+    when('/articles', {
+        templateUrl: 'partials/articles.html',
+        controller: 'ArticleListCtrl'
     }).
-    when('/post/:postId', {
-        templateUrl: 'partials/post.html',
-        controller: 'PostCtrl'
+    when('/article/:articleId', {
+        templateUrl: 'partials/article.html',
+        controller: 'ArticleCtrl'
     }).
     when('/create', {
         templateUrl: 'partials/create.html',
