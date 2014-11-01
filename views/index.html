@@ -38,9 +38,9 @@
             <div id="rencent">
                 <h3>Recent Posts</h3>
                 <ul>
-                    {% for post in recent %}
+                    {% for article in recent %}
                         <li class="recent-title">
-                            <a href="/post/{{ post.id }}">{{ post.title }}</a>
+                            <a href="/article/{{ article.id }}">{{ article.title }}</a>
                         </li>
                     {% endfor %}
                 </ul>

@@ -36,12 +36,14 @@ blogeaControllers.controller('ArticleCtrl', ['$scope', '$routeParams', '$http',
     }
 ]);
 
-blogeaControllers.controller('CreateCtrl', ['$scope', '$http', '$location',
-    function($scope, $http, $location) {
+blogeaControllers.controller('CreateCtrl', ['$scope', '$http', '$window', '$location',
+    function($scope, $http, $window, $location) {
         $scope.form = {};
         $scope.submitCreateForm = function(event){
             $http.post('/api/article', $scope.form).success(function(data){
                 $location.path('/');
+                // refresh the index page to update `recent post`
+                $window.location.href = '/';
             });
         };
     }
